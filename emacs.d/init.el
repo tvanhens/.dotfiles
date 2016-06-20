@@ -70,20 +70,6 @@
 ;; Company mode
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; Cider
-(add-hook 'cider-mode-hook #'eldoc-mode)
-
-;; Clj-Refactor
-(require 'clj-refactor)
-
-(defun my-clojure-mode-hook ()
-    (clj-refactor-mode 1)
-    (yas-minor-mode 1) ; for adding require/use/import statements
-    ;; This choice of keybinding leaves cider-macroexpand-1 unbound
-    (cljr-add-keybindings-with-prefix "C-c C-m"))
-
-(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
-
 ;; Neo Tree
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
@@ -120,11 +106,43 @@
 (setq js-indent-level 2)
 
 ;;------------------------------------------------------------------------------
-;; Clojure Indentation
+;; Clojure
+
+;; Indentation
 
 (require 'clojure-mode)
 
 (put-clojure-indent 'match 1)
+
+;; Clj-Refactor
+(require 'clj-refactor)
+
+(defun my-clojure-mode-hook ()
+    (clj-refactor-mode 1)
+    (yas-minor-mode 1) ; for adding require/use/import statements
+    ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+    (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+;; Align clojure forms vertically automatically
+(setq clojure-align-forms-automatically t)
+
+(defun clojure-format-on-save ()
+  (indent-region (point-min) (point-max)))
+
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            ;; Format the buffer on save
+            (add-hook 'before-save-hook 'clojure-format-on-save nil 'make-it-local)
+
+            ;; Delete trailing whitespace on save
+            (add-hook 'before-save-hook 'delete-trailing-whitespace nil 'make-it-local)))
+
+;; Consider making this local
+(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+
+;; Cider
+(add-hook 'cider-mode-hook #'eldoc-mode)
+
 
 ;;------------------------------------------------------------------------------
 ;; Keybindings
@@ -173,3 +191,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'set-goal-column 'disabled nil)
