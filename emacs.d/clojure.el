@@ -13,6 +13,9 @@
 (put-clojure-indent 'match 1)
 (setq clojure-align-forms-automatically t)
 
+;; Use paredit bindings
+(sp-use-paredit-bindings)
+
 ;; Utility functions
 
 (defun tvh-clj-mode-hook ()
