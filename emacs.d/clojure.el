@@ -12,6 +12,7 @@
 
 (put-clojure-indent 'match 1)
 (setq clojure-align-forms-automatically t)
+(setq clojure-indent-style :always-indent)
 
 ;; Use paredit bindings
 (sp-use-paredit-bindings)
