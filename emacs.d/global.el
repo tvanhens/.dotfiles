@@ -88,3 +88,6 @@
 
 ;; Remove ws on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Git gutter
+(global-git-gutter-mode +1)
