@@ -87,7 +87,11 @@
 (global-set-key (kbd "C-x o") 'ace-window)
 
 ;; Remove ws on save
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(defun tvh-remove-ws ()
+  (interactive)
+  (delete-trailing-whitespace))
+
+(add-hook 'before-save-hook 'tvh-remove-ws)
 
 ;; Git gutter
 (global-git-gutter-mode +1)
