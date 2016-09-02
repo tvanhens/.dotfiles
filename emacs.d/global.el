@@ -82,7 +82,6 @@
   (winner-mode 1))
 
 ;; Window Changing
-
 (require 'ace-window)
 (global-set-key (kbd "C-x o") 'ace-window)
 
@@ -95,3 +94,6 @@
 
 ;; Git gutter
 (global-git-gutter-mode +1)
+
+;; Git link
+(setq git-link-open-in-browser t)

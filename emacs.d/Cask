@@ -27,6 +27,7 @@
 (depends-on "gh-md")
 (depends-on "git-commit")
 (depends-on "git-gutter")
+(depends-on "git-link")
 (depends-on "go-autocomplete")
 (depends-on "go-mode")
 (depends-on "groovy-mode")
