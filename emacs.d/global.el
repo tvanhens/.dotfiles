@@ -97,3 +97,4 @@
 
 ;; Git link
 (setq git-link-open-in-browser t)
+(global-set-key (kbd "C-c g l") 'git-link)
