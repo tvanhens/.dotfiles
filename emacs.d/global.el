@@ -98,3 +98,7 @@
 ;; Git link
 (setq git-link-open-in-browser t)
 (global-set-key (kbd "C-c g l") 'git-link)
+
+;; Multi-term
+(require 'helm-mt)
+(global-set-key (kbd "C-x t") 'helm-mt)
