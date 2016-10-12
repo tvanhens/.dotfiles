@@ -23,7 +23,7 @@
 (global-set-key [f5] 'call-last-kbd-macro)
 
 ;; Font
-(set-default-font "Inconsolata 18")
+(set-default-font "Inconsolata 14")
 
 (require 'default-text-scale)
 (global-set-key (kbd "C-M-=") 'default-text-scale-increase)
