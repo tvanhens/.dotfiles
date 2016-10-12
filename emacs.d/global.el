@@ -22,9 +22,6 @@
 ;; Global Config
 (global-set-key [f5] 'call-last-kbd-macro)
 
-;; Logview
-(require 'logview)
-
 ;; Font
 (set-default-font "Inconsolata 18")
 

@@ -44,7 +44,6 @@
 (depends-on "idle-highlight-mode")
 (depends-on "itail")
 (depends-on "logstash-conf")
-(depends-on "logview")
 (depends-on "magit")
 (depends-on "magit-popup")
 (depends-on "markdown-mode")
