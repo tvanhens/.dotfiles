@@ -102,3 +102,6 @@
 ;; Multi-term
 (require 'helm-mt)
 (global-set-key (kbd "C-x t") 'helm-mt)
+
+;; Neotree
+(global-set-key (kbd "<f8>") 'neotree-toggle)
