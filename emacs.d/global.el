@@ -98,4 +98,5 @@
 (global-set-key (kbd "C-x t") 'helm-mt)
 
 ;; Neotree
-(global-set-key (kbd "<f8>") 'neotree-toggle)
+(global-set-key (kbd "<f8>") 'neotree-show)
+(global-set-key (kbd "S-<f8>") 'neotree-hide)
