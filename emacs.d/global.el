@@ -1,6 +1,9 @@
 ;;------------------------------------------------------------------------------
 ;; Global
 
+;; Theme:
+(color-theme-sanityinc-tomorrow-night)
+
 ;; Set customizations file
 (setq custom-file (concat user-emacs-directory ".custom.el"))
 (ignore-errors
@@ -15,9 +18,6 @@
 
 ;; Turn off welcome message
 (setq inhibit-startup-message t)
-
-;; Nyan cat
-(add-hook 'emacs-startup-hook 'nyan-mode)
 
 ;; Global Config
 (global-set-key [f5] 'call-last-kbd-macro)
@@ -49,9 +49,6 @@
 
 ;; Indent
 (global-set-key (kbd "C-c n") 'indent-region)
-
-;; Theme:
-(load-theme 'monokai t)
 
 ;; Projectile everywhere
 (projectile-global-mode)
