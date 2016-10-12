@@ -17,6 +17,9 @@
 ;; Use paredit bindings
 (sp-use-paredit-bindings)
 
+;; Cider-Helm
+(helm-cider-mode 1)
+
 ;; Utility functions
 
 (defun tvh-clj-bindings ()
@@ -39,4 +42,3 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook 'tvh-clj-mode-hook)
 (add-hook 'clojure-mode-hook 'tvh-clj-bindings)
-
