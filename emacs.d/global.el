@@ -6,6 +6,9 @@
 (ignore-errors
   (load-file custom-file))
 
+
+(color-theme-sanityinc-tomorrow-night)
+
 ;; Show line numbers everywhere
 (global-linum-mode)
 
