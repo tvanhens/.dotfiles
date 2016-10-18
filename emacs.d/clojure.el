@@ -14,11 +14,21 @@
 (setq clojure-align-forms-automatically t)
 (setq clojure-indent-style :always-indent)
 
+;; Pop cider open in same window
+(setq cider-repl-display-in-current-window t)
+
 ;; Use paredit bindings
 (sp-use-paredit-bindings)
 
 ;; Cider-Helm
 (helm-cider-mode 1)
+
+;; Reloaded utilities
+(setq cider-refresh-before-fn "user/stop"
+      cider-refresh-after-fn "user/start")
+
+;; Clojurescript repl
+(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
 
 ;; Utility functions
 
