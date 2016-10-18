@@ -1,9 +1,6 @@
 ;;------------------------------------------------------------------------------
 ;; Global
 
-;; Theme:
-(color-theme-sanityinc-tomorrow-night)
-
 ;; Set customizations file
 (setq custom-file (concat user-emacs-directory ".custom.el"))
 (ignore-errors
