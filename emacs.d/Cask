@@ -2,7 +2,6 @@
 (source melpa)
 
 (depends-on "ace-window")
-(depends-on "aggressive-indent")
 (depends-on "ansible")
 (depends-on "async")
 (depends-on "avy")

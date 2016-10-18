@@ -37,7 +37,6 @@
 
 (add-hook 'cider-mode-hook 'eldoc-mode)
 
-(add-hook 'clojure-mode-hook 'aggressive-indent-mode)
 (add-hook 'clojure-mode-hook 'smartparens-strict-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook 'tvh-clj-mode-hook)
