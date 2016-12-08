@@ -14,6 +14,5 @@
 (load-file "./.emacs.d/elisp.el")
 (load-file "./.emacs.d/js.el")
 (load-file "./.emacs.d/global.el")
-(load-file "./.emacs.d/go.el")
 (load-file "./.emacs.d/markdown.el")
 (load-file "./.emacs.d/window.el")
