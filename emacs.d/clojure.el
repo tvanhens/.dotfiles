@@ -13,6 +13,7 @@
 (put-clojure-indent 'match 1)
 (setq clojure-align-forms-automatically t)
 (setq clojure-indent-style :always-indent)
+(setq cider-repl-display-help-banner nil)
 
 ;; Pop cider open in same window
 (setq cider-repl-display-in-current-window t)
