@@ -16,4 +16,5 @@
 (load-file "./.emacs.d/global.el")
 (load-file "./.emacs.d/markdown.el")
 (load-file "./.emacs.d/window.el")
+(load-file "./.emacs.d/term.el")
 (load-file "./.emacs.d/local.el")

@@ -93,12 +93,6 @@
 (setq git-link-open-in-browser t)
 (global-set-key (kbd "C-c g l") 'git-link)
 
-;; Multi-term
-(require 'helm-mt)
-(global-set-key (kbd "C-x t") 'helm-mt)
-
-(add-to-list 'term-bind-key-alist '("C-c C-j" . term-line-mode))
-
 ;; Neotree
 (global-set-key (kbd "<f8>") 'neotree-show)
 (global-set-key (kbd "S-<f8>") 'neotree-hide)
