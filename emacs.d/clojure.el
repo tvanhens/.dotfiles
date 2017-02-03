@@ -10,9 +10,11 @@
 
 ;; Configuration
 
+;; Formatting
 (put-clojure-indent 'match 1)
 (setq clojure-align-forms-automatically t)
-(setq clojure-indent-style :always-indent)
+
+;; Cider
 (setq cider-repl-display-help-banner nil)
 
 ;; Pop cider open in same window
