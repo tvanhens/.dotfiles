@@ -42,6 +42,7 @@
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
 (depends-on "itail")
+(depends-on "let-alist")
 (depends-on "logstash-conf")
 (depends-on "magit")
 (depends-on "magit-popup")
