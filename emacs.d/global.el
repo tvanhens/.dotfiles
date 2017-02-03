@@ -30,10 +30,7 @@
 (global-set-key (kbd "C-M--") 'default-text-scale-decrease)
 (put 'set-goal-column 'disabled nil)
 
-;; Path
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-env "GOPATH"))
+(exec-path-from-shell-initialize)
 
 ;; Stop visible alert
 (setq ring-bell-function 'ignore)
