@@ -12,3 +12,4 @@ emacs.d/projectile-bookmarks.eld
 /emacs.d/tramp
 /emacs.d/%backup%~
 /emacs.d/local.el
+/emacs.d/request/*
