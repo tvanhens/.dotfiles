@@ -53,7 +53,7 @@
 
 (helm-mode 1)                                     ; Use helm by default
 (global-set-key (kbd "C-x C-f") 'helm-find-files) ; Use helm for files
-(helm-autoresize-mode 1)                          ; Autosize helm buffer
+; (helm-autoresize-mode 1)                          ; Autosize helm buffer
 
 ;; Helm Projectile
 (helm-projectile-on)
