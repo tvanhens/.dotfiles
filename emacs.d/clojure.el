@@ -31,7 +31,7 @@
       cider-refresh-after-fn "user/start")
 
 ;; Clojurescript repl
-(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
+(setq cider-cljs-lein-repl "(cljs-repl)")
 
 ;; Utility functions
 
