@@ -25,6 +25,18 @@
 ;; Font
 (set-default-font "Inconsolata 14")
 
+;; Font Locking
+(defun my-font-lock-function (start end)
+  "Set faces for font-lock between START and END.")
+
+(defun my-font-lock-matcher (limit)
+  (my-font-lock-function (point) limit)
+  nil)
+
+(setq font-lock-defaults
+      (list
+       `(my-font-lock-matcher (1 font-lock-keyword-face nil))))
+
 (require 'default-text-scale)
 (global-set-key (kbd "C-M-=") 'default-text-scale-increase)
 (global-set-key (kbd "C-M--") 'default-text-scale-decrease)
