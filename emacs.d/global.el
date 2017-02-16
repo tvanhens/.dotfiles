@@ -19,6 +19,9 @@
 ;; Global Config
 (global-set-key [f5] 'call-last-kbd-macro)
 
+;; Column Mode
+(setq column-number-mode t)
+
 ;; Font Locking
 (defun my-font-lock-function (start end)
   "Set faces for font-lock between START and END.")
