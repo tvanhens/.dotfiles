@@ -9,9 +9,6 @@
 
 (color-theme-sanityinc-tomorrow-night)
 
-;; Show line numbers everywhere
-(global-linum-mode)
-
 ;; Smart mode line
 (setq sml/theme 'dark)
 (sml/setup)
@@ -21,9 +18,6 @@
 
 ;; Global Config
 (global-set-key [f5] 'call-last-kbd-macro)
-
-;; Font
-(set-default-font "Inconsolata 14")
 
 ;; Font Locking
 (defun my-font-lock-function (start end)
@@ -36,6 +30,9 @@
 (setq font-lock-defaults
       (list
        `(my-font-lock-matcher (1 font-lock-keyword-face nil))))
+
+;; Font
+(set-default-font "Inconsolata 14")
 
 (require 'default-text-scale)
 (global-set-key (kbd "C-M-=") 'default-text-scale-increase)
