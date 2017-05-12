@@ -57,6 +57,7 @@
 (depends-on "package-build")
 (depends-on "pallet")
 (depends-on "paredit")
+(depends-on "pinentry")
 (depends-on "popwin")
 (depends-on "prodigy")
 (depends-on "projectile")

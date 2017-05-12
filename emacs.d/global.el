@@ -105,3 +105,10 @@
 ;; Neotree
 (global-set-key (kbd "<f8>") 'neotree-show)
 (global-set-key (kbd "S-<f8>") 'neotree-hide)
+
+;; GPG
+(setenv "INSIDE_EMACS" (format "%s,comint" emacs-version))
+(pinentry-start)
+(require 'exec-path-from-shell)
+(exec-path-from-shell-copy-env "SSH_AGENT_PID")
+(exec-path-from-shell-copy-env "SSH_AUTH_SOCK")

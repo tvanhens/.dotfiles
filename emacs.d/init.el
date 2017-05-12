@@ -24,6 +24,6 @@
 (load-file "./.emacs.d/markdown.el")
 (load-file "./.emacs.d/window.el")
 (load-file "./.emacs.d/term.el")
-(load-file "./.emacs.d/python.el")
+;(load-file "./.emacs.d/python.el")
 (when (file-exists-p "./.emacs.d/local.el")
   (load-file "./.emacs.d/local.el"))
