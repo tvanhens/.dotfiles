@@ -1,14 +1,12 @@
-;;------------------------------------------------------------------------------
-;; Cask and Pallet Configuration
+;;; init.el --- Tyler van Hensbergen's custom config
 
+;;; Commentary:
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;;; Code:
+
 (package-initialize)
 
-(require 'cask "~/.cask/cask.el")
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
 ;; Keep installed packages in sync with ~/.emacs.d/Cask file
@@ -17,13 +15,22 @@
 ;;------------------------------------------------------------------------------
 ;; Custom Configuration
 
-(load-file "./.emacs.d/clojure.el")
-(load-file "./.emacs.d/elisp.el")
-(load-file "./.emacs.d/js.el")
-(load-file "./.emacs.d/global.el")
-(load-file "./.emacs.d/markdown.el")
-(load-file "./.emacs.d/window.el")
-(load-file "./.emacs.d/term.el")
-;(load-file "./.emacs.d/python.el")
-(when (file-exists-p "./.emacs.d/local.el")
-  (load-file "./.emacs.d/local.el"))
+;; Set customizations file
+(setq custom-file (concat user-emacs-directory ".custom.el"))
+(ignore-errors (load-file custom-file))
+
+(defun load-user-config (file)
+  "Load a FILE from the Emacs config dir."
+  (load-file (concat user-emacs-directory file)))
+
+(load-user-config "global.el")
+(load-user-config "clojure.el")
+(load-user-config "elisp.el")
+(load-user-config "js.el")
+(load-user-config "window.el")
+(load-user-config "term.el")
+(load-user-config "python.el")
+(ignore-errors (load-user-config "local.el"))
+
+(provide 'init)
+;;; init.el ends here

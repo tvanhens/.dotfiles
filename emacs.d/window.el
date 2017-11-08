@@ -1,3 +1,9 @@
+;;; window.el --- Window config
+
+;;; Commentary:
+
+;;; Code:
+
 ;; Window movement
 (global-set-key (kbd "<s-left>") 'windmove-left)
 (global-set-key (kbd "<s-right>") 'windmove-right)
@@ -15,3 +21,6 @@
 (global-set-key (kbd "s--") 'split-window-below)
 (global-set-key (kbd "s-d") 'delete-window)
 (global-set-key (kbd "s-b") 'ibuffer)
+
+(provide 'window)
+;;; window.el ends here
