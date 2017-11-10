@@ -68,6 +68,10 @@
 ;;------------------------------------------------------------------------------
 ;; Misc:
 
+;; Backups
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
+
 ;; spaces > tabs
 (setq-default indent-tabs-mode nil)
 
@@ -82,7 +86,6 @@
 
 ;; Helm
 (helm-mode 1)                                     ; Use helm by default
-(global-set-key (kbd "C-x C-f") 'helm-find-files) ; Use helm for files
 
 ;; Helm Projectile
 (helm-projectile-on)
@@ -135,6 +138,11 @@
 ;; Neotree
 (global-set-key (kbd "<f8>") 'neotree-show)
 (global-set-key (kbd "S-<f8>") 'neotree-hide)
+
+;; Helm
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-M-y") 'helm-show-kill-ring)
 
 (provide 'global)
 ;;; global.el ends here
